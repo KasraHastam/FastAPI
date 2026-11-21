@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<article class="post">
+
+    <div class="metadata">
+        <span>{{ post.author }}</span>
+        <small>{{ post.date_posted }}</small>
+    </div>
+
+    <h2>{{ post.title }}</h2>
+
+    <p>{{ post.content }}</p>
+
+</article>
+
+<a href="{{ url_for('home') }}">Back to Home</a>
+
+{% endblock content %}
